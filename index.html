@@ -74,14 +74,64 @@
         .subscribe-btn:hover {
             background-color: #3367D6; /* Темно-синий при наведении */
         }
+
+        /* Стили для формы ВКонтакте */
+        .vk-auth {
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .vk-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .vk-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .vk-title {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .vk-input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .vk-submit {
+            background-color: #4A76A8; /* Характерный синий ВК */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .vk-submit:hover {
+            background-color: #3D6899;
+        }
     </style>
 </head>
 <body>
     <div class="user-card">
         <h2 class="user-name">Алексей Воровской</h2>
-        <p class="user-role">Программный инженер</p>
+        <p class="user-role">Программный инженей</p>
         <p class="user-bio">
-            Специализируюсь на создании Приложений. Люблю чистый код и интересные задачи.
+            Специализируюсь на создании приложений. Люблю чистый код и интересные задачи.
         </p>
         <div class="user-details">
             <div class="detail-item"><strong>📍 Город:</strong> Москва</div>
@@ -90,6 +140,19 @@
             <div class="detail-item"><strong>📧 Email:</strong> yandex@mail.com</div>
         </div>
         <button class="subscribe-btn">Подписаться на новости</button>
+
+        <!-- Форма входа через ВКонтакте -->
+        <div class="vk-auth">
+            <div class="vk-header">
+                <img src="https://vk.com/images/icons/favicons/fav_logo.ico" alt="VK" class="vk-logo">
+                <span class="vk-title">Войти через ВКонтакте</span>
+            </div>
+            <form>
+                <input type="text" class="vk-input" placeholder="Логин или телефон">
+                <input type="password" class="vk-input" placeholder="Пароль">
+                <button type="button" class="vk-submit">Войти</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
